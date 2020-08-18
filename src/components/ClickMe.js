@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { URI } from "./../common/constants";
 import Button from "@material-ui/core/Button";
-
+import "./../assets/styles/clicks.css";
 export default class ClickMe extends Component {
   constructor(props) {
     super(props);
