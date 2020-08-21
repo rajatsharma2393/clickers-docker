@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### `Pre-installations`
+
+## Docker
+
+## Docker-Compose
+
 ### `docker-compose up`
 
 Runs server on port (4000), and react app on (8-).
