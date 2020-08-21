@@ -7,7 +7,7 @@ import "./../assets/styles/graph.css";
 export default class ClickGraph extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: {}, isLoading: true };
+    this.state = { data: {}, isLoading: true, options: {} };
   }
   componentDidMount() {
     this.getGraphData();
@@ -26,12 +26,12 @@ export default class ClickGraph extends Component {
                 label: "No. of Clicks",
                 fill: false,
                 backgroundColor: "rgba(1,1,1,1)",
-                borderColor: "rgba(76, 75, 75,1)",
+                borderColor: "rgba(1,1,1,1)",
                 borderDash: [],
                 borderDashOffset: 0.0,
                 borderJoinStyle: "miter",
                 pointBorderColor: "rgba(1,1,1,1)",
-                pointBackgroundColor: "#fff",
+                pointBackgroundColor: "rgba(1,1,1,1)",
                 pointBorderWidth: 1,
                 pointHoverRadius: 5,
                 pointHoverBackgroundColor: "rgba(1,1,1,1)",
@@ -43,7 +43,28 @@ export default class ClickGraph extends Component {
               }
             ]
           },
-          isLoading: false
+          isLoading: false,
+          options: {
+            responsive: true,
+            scales: {
+              yAxes: [
+                {
+                  scaleLabel: {
+                    display: true,
+                    labelString: "Clicks"
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  scaleLabel: {
+                    display: true,
+                    labelString: "Hours:Minutes"
+                  }
+                }
+              ]
+            }
+          }
         });
       } else {
         this.setState({
@@ -55,7 +76,7 @@ export default class ClickGraph extends Component {
   render() {
     let graphContent =
       this.state.data && Object.keys(this.state.data).length > 0 ? (
-        <Line data={this.state.data} />
+        <Line data={this.state.data} options={this.state.options} />
       ) : (
         <div className="no-clicks">Get some clicks first</div>
       );

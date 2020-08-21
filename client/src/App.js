@@ -7,8 +7,8 @@ import Header from "./common/header";
 function App() {
   return (
     <React.Fragment>
-      <Header />
       <HashRouter>
+        <Header />
         <div className="container">
           <h1>Kill your time here</h1>
           <div className="navigation-header">

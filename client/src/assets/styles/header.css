@@ -8,3 +8,6 @@
   position: relative;
   left: 10%;
 }
+.app-header > img:hover {
+  cursor: pointer;
+}
