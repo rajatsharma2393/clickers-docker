@@ -1,10 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `Pre-installations`
+## `Pre-installations`
 
-## Docker
+### Docker
 
-## Docker-Compose
+## Running Application
 
 ### `docker-compose up`
 
