@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `docker-compose up`
 
-Runs server on port (4000), and react app on (8-).
+Runs server on port (4000), and react app on (80).
 Open [http://localhost](http://localhost) to view it in the browser.
 
 ### `How to Use`
