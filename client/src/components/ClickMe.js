@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { URI } from "./../common/constants";
 import Button from "@material-ui/core/Button";
 import "./../assets/styles/clicks.css";
 export default class ClickMe extends Component {
@@ -24,7 +23,7 @@ export default class ClickMe extends Component {
       positionX: newX,
       positionY: newY
     });
-    axios.post(URI);
+    axios.post("/clicks");
   };
   render() {
     let btnStyle = {

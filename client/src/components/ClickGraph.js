@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
-import { URI } from "./../common/constants";
 import ClipLoader from "react-spinners/ClipLoader";
 import "./../assets/styles/graph.css";
 export default class ClickGraph extends Component {
@@ -13,7 +12,7 @@ export default class ClickGraph extends Component {
     this.getGraphData();
   }
   getGraphData = () => {
-    axios.get(URI).then(res => {
+    axios.get("/clicks").then(res => {
       if (res.status === 200 && Object.keys(res.data.clicks).length > 0) {
         let labels = Object.keys(res.data.clicks);
         let clicks = Object.values(res.data.clicks);
